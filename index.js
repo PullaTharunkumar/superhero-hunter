@@ -44,12 +44,12 @@ submitBtn?.addEventListener('click', async (e) => {
         const favBtnTxt = document.getElementById(`fav${id}`)
         if (favList?.includes(id)) { //Removing From Favourites
             favList?.splice(favList?.indexOf(id), 1)
-            favBtnTxt?.innerHTML = 'Add to Favourites'
+            favBtnTxt.innerHTML = 'Add to Favourites'
             localStorage.setItem('fav', JSON.stringify(favList))
         }
         else { //From Favourites
             favList?.push(id)
-            favBtnTxt?.innerHTML = 'Remove from Favourites'
+            favBtnTxt.innerHTML = 'Remove from Favourites'
             localStorage.setItem('fav', JSON.stringify(favList))
         }
     }
