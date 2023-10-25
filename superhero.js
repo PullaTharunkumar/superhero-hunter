@@ -31,8 +31,8 @@ const render = async (data) => {
     detailsHtml = ''
     // Looping Superheroe data (comics, events, series, stories)
     for (let i of dataList) {
-        // const url = i.resourceURI + `?ts=0&apikey=2f4a049d7e302a9993962a89b95b28fe&hash=64ef51991e88c83111f824e3b6106a13` // url for fetchig data
-        const res = await fetch(`${i.resourceURI}?ts=0&apikey=2f4a049d7e302a9993962a89b95b28fe&hash=64ef51991e88c83111f824e3b6106a13`)
+        const url = 'https'+i.resourceURI.substring(i.resourceURI.indexOf(':'),i.resourceURI.length) + `?ts=0&apikey=2f4a049d7e302a9993962a89b95b28fe&hash=64ef51991e88c83111f824e3b6106a13` // url for fetchig data
+        const res = await fetch(url)
         const jsonRes = await res.json(); // (comics, events, series, stories) character json data from marvel api
         const item = jsonRes?.data?.results[0]
         const itemImg = item?.thumbnail ? item?.thumbnail?.path + '.' + item?.thumbnail?.extension : 'https://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available.jpg'
