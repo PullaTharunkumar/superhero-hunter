@@ -1,0 +1,76 @@
+* {
+    background-color: transparent;
+}
+
+body {
+    margin: 0px;
+    text-align: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-image: url("./backgroup-image.jpg");
+    background-repeat: no-repeat;
+}
+
+#page {
+    margin-top: 0px;
+    color: rgb(23, 99, 230);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.inline {
+    display: inline;
+}
+
+.btn {
+    height: 30px;
+    border-radius: 12px;
+    border-color: blueviolet;
+    color: rgb(101, 182, 211);
+    margin: 20px;
+}
+
+#superhero-name {
+    color: rgb(233, 212, 120);
+}
+
+#profile>img {
+    height: 300px;
+    width: 300px;
+    border: 10px solid rgb(231, 193, 115);
+}
+
+#details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cart {
+    height: 200px;
+    width: 500px;
+    display: flex;
+    margin: 20px;
+}
+
+.left-div {
+    height: 200px;
+    width: 150px;
+}
+
+.left-div>img {
+    height: 200px;
+    width: 150px;
+}
+
+.right-div {
+    display: flex;
+    align-items: center;
+    color: rgb(236, 184, 240);
+    font-size: 1em;
+    font-weight: bold;
+}
