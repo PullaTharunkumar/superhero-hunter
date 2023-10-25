@@ -8,7 +8,7 @@ homeBtn.onclick = () => {
 }
 
 // While Fetching data displaying Loading Message
-favListDivRef.innerHTML = '<h1>Loading.....</h1>'
+favListDivRef.innerHTML = favList.length ? '<h1>Loading.....</h1>' : null
 
 const init = async () => {
     let favListHtml = '';
