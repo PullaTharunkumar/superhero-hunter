@@ -42,14 +42,14 @@ submitBtn?.addEventListener('click', async (e) => {
     // Adding and Removing in Favourites
     favourites = (id) => {
         const favBtnTxt = document.getElementById(`fav${id}`)
-        if (favList.includes(id)) { //Removing From Favourites
-            favList.splice(favList.indexOf(id), 1)
-            favBtnTxt.innerHTML = 'Add to Favourites'
+        if (favList?.includes(id)) { //Removing From Favourites
+            favList?.splice(favList?.indexOf(id), 1)
+            favBtnTxt?.innerHTML = 'Add to Favourites'
             localStorage.setItem('fav', JSON.stringify(favList))
         }
         else { //From Favourites
-            favList.push(id)
-            favBtnTxt.innerHTML = 'Remove from Favourites'
+            favList?.push(id)
+            favBtnTxt?.innerHTML = 'Remove from Favourites'
             localStorage.setItem('fav', JSON.stringify(favList))
         }
     }
