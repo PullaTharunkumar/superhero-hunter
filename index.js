@@ -4,7 +4,8 @@ const favouritesBtn = document.getElementById('favourites-btn')
 
 // Taking Favourite List from Loal storage
 let favList = JSON.parse(localStorage.getItem('fav'))
-favList?.length ? null : favList = [] && localStorage.setItem('fav','[]')
+favList?.length ? null : localStorage.setItem('fav','[]')
+favList = JSON.parse(localStorage.getItem('fav'))
 
 // Opening Favourites Page 
 favouritesBtn.onclick = () => {
