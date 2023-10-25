@@ -27,7 +27,7 @@ submitBtn?.addEventListener('click', async (e) => {
     for (list of jsonData?.data?.results) {
         const imageUrl = list.thumbnail.path.substring(list.thumbnail.path.indexOf(":") + 1, list.thumbnail.path.length) + '.' + list.thumbnail.extension;
         const name = list.name
-        const favBtnText = favList.includes(list.id) ? 'Remove from Favourites' : 'Add to Favourite'
+        const favBtnText = favList?.includes(list.id) ? 'Remove from Favourites' : 'Add to Favourite'
         superHeroes += `<div class='card'><div class='left-div'><img src='https:${imageUrl}' onclick="details(${list.id})"></div><div class='right-div'><span class="name">${name}</span><button class="fav" id='fav${list.id}' onclick = 'favourites(${list.id})'>${favBtnText}</button></div></div>`
     }
     // For Superhero Page setting id in local Storage
